@@ -5,6 +5,29 @@
     <title>Pag2</title>
 </head>
 <body>
-<p> Hola {{ c }} </p>
+<p> Hola </p>
+        <p>
+            {% for a in c %}
+                {% if a == "Comunicacion y disenio" %}
+                    <p><a href="pag3">{{ a }}</a></p><br>
+                {% elif a == "Ciencias Administrativas" %}
+                    <p><a href="http://youtube.com">{{ a }}</a></p><br>
+                {% elif a == "Ingenieria y sistemas" %}
+                    <p><a href="http://youtube.com">{{ a }}</a></p><br>
+                {% elif a == "Ciencias de la salud" %}
+                    <p><a href="http://youtube.com">{{ a }}</a></p><br>
+                {% elif a == "Arquitectura" %}
+                    <p><a href="http://youtube.com">{{ a }}</a></p><br>
+                {% elif a == "Derecho y ciencias politicas" %}
+                    <p><a href="http://youtube.com">{{ a }}</a></p><br>
+                {% elif a == "Hotelería, Gastronomía y Turismo" %}
+                    <p><a href="http://youtube.com">{{ a }}</a></p><br>
+                {% elif a == "Derecho y ciencias politicas" %}
+                    <p><a href="http://youtube.com">{{ a }}</a></p><br>
+                {% elif a == "Logistica Maritma y portuaria" %}
+                    <p><a href="http://youtube.com">{{ a }}</a></p><br>
+                {% endif %}
+            {% endfor %}
+        </p>
 </body>
 </html>

@@ -18,6 +18,7 @@ def iniciar():
 
 @app.route('/Hola', methods=['POST'])
 def test1():
+    carreras=[]
     pregunta1 = request.form['pregunta1']
     pregunta2 = request.form['pregunta2']
     pregunta3 = request.form['pregunta3']
@@ -45,40 +46,34 @@ def test1():
     pregunta25 = request.form['pregunta25']
     if pregunta1 == "si" and pregunta4 == "si" and pregunta18 == "si":
         carrera='Comunicacion y disenio'
-        respuesta = make_response(render_template('pag2.html', c=carrera))
-        return respuesta
+        carreras.append(carrera)
     if pregunta2 == "si" and pregunta5 == "si" and pregunta14 == "si":
         carrera = 'Ciencias Administrativas'
-        respuesta = make_response(render_template('pag2.html', c=carrera))
-        return respuesta
+        carreras.append(carrera)
     if pregunta7 == "si" and pregunta10 == "si" and pregunta15 == "si":
         carrera = 'Ingenieria y sistemas'
-        respuesta = make_response(render_template('pag2.html', c=carrera))
-        return respuesta
+        carreras.append(carrera)
     if pregunta9 == "si" and pregunta11 == "si" and pregunta21 == "si":
         carrera = 'Ciencias de la salud'
-        respuesta = make_response(render_template('pag2.html', c=carrera))
-        return respuesta
+        carreras.append(carrera)
     if pregunta6 == "si" and pregunta12 == "si" and pregunta16 == "si":
         carrera = 'Arquitectura'
-        respuesta = make_response(render_template('pag2.html', c=carrera))
-        return respuesta
+        carreras.append(carrera)
     if pregunta13 == "si" and pregunta17 == "si" and pregunta20 == "si":
         carrera = 'Derecho y ciencias politicas'
-        respuesta = make_response(render_template('pag2.html', c=carrera))
-        return respuesta
+        carreras.append(carrera)
     if pregunta3 == "si" and pregunta8 == "si" and pregunta19 == "si" and pregunta22 == 'si':
         carrera = 'Hotelería, Gastronomía y Turismo'
-        respuesta = make_response(render_template('pag2.html', c=carrera))
-        return respuesta
+        carreras.append(carrera)
     if pregunta13 == "si" and pregunta17 == "si" and pregunta20 == "si":
         carrera = 'Derecho y ciencias politicas'
-        respuesta = make_response(render_template('pag2.html', c=carrera))
-        return respuesta
+        carreras.append(carrera)
     if pregunta23 == "si" and pregunta24 == "si" and pregunta25 == "si":
         carrera = 'Logistica Maritma y portuaria'
-        respuesta = make_response(render_template('pag2.html', c=carrera))
-        return respuesta
+        carreras.append(carrera)
+
+    respuesta = make_response(render_template('pag2.html', c=carreras))
+    return respuesta
 
 if __name__ == "__main__":
     app.run(debug=True)
