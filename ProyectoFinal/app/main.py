@@ -65,14 +65,12 @@ def test1():
     if pregunta3 == "si" and pregunta8 == "si" and pregunta19 == "si" and pregunta22 == 'si':
         carrera = 'Hotelería, Gastronomía y Turismo'
         carreras.append(carrera)
-    if pregunta13 == "si" and pregunta17 == "si" and pregunta20 == "si":
-        carrera = 'Derecho y ciencias politicas'
-        carreras.append(carrera)
     if pregunta23 == "si" and pregunta24 == "si" and pregunta25 == "si":
         carrera = 'Logistica Maritma y portuaria'
         carreras.append(carrera)
-
-    respuesta = make_response(render_template('pag2.html', c=carreras))
+    cantidad=len(carreras)
+    temp=0
+    respuesta = make_response(render_template('pag2.html', c=carreras, t=cantidad, f=temp))
     return respuesta
 
 if __name__ == "__main__":

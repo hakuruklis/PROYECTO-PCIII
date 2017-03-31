@@ -1,13 +1,17 @@
 <!DOCTYPE html>
     <head>
         <title>Pantalla de Inicio Proyecto final</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/style1.css') }}">
     </head>
-    <Body>
-        <div>
+    <Body bgcolor="#D8D8D8">
+        <div class="encabezado">
+            <h1>Test de  Orientacion Vocacional UIP</h1>
+        </div>
+        <div class="cuerpo">
+            <p id="titulo">Ingrese su nombre</p>
             <form action="/iniciar" method="post">
-                <p><h3>Ingrese su nombre</h3></p>
-                <p><input type="text" name="nombre"/></p>
-                <p><input type="submit" value="Iniciar prueba"></p>
+                <p><input id="txt" type="text" name="nombre"/></p>
+                <p><input id="boton" type="submit" value="Iniciar prueba"></p>
             </form>
         </div>
     </Body>

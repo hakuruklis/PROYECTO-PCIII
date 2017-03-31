@@ -6,28 +6,28 @@
 </head>
 <body>
 <p> Hola </p>
-        <p>
+        <p>{{ t }}</p>
+        <form name="myForm" action="/Hola" method="post" onsubmit="">
             {% for a in c %}
                 {% if a == "Comunicacion y disenio" %}
-                    <p><a href="pag3">{{ a }}</a></p><br>
+                    <input type="radio" name="pregunta" value="{{ a }}"> {{ a }} <br>
                 {% elif a == "Ciencias Administrativas" %}
-                    <p><a href="http://youtube.com">{{ a }}</a></p><br>
+                    <input type="radio" name="pregunta" value="{{ a }}"> {{ a }} <br>
                 {% elif a == "Ingenieria y sistemas" %}
-                    <p><a href="http://youtube.com">{{ a }}</a></p><br>
+                    <input type="radio" name="pregunta" value="{{ a }}"> {{ a }} <br>
                 {% elif a == "Ciencias de la salud" %}
-                    <p><a href="http://youtube.com">{{ a }}</a></p><br>
+                    <input type="radio" name="pregunta" value="{{ a }}"> {{ a }} <br>
                 {% elif a == "Arquitectura" %}
-                    <p><a href="http://youtube.com">{{ a }}</a></p><br>
+                    <input type="radio" name="pregunta" value="{{ a }}"> {{ a }} <br>
                 {% elif a == "Derecho y ciencias politicas" %}
-                    <p><a href="http://youtube.com">{{ a }}</a></p><br>
+                    <input type="radio" name="pregunta" value="{{ a }}"> {{ a }} <br>
                 {% elif a == "Hotelería, Gastronomía y Turismo" %}
-                    <p><a href="http://youtube.com">{{ a }}</a></p><br>
-                {% elif a == "Derecho y ciencias politicas" %}
-                    <p><a href="http://youtube.com">{{ a }}</a></p><br>
+                    <input type="radio" name="pregunta" value="{{ a }}"> {{ a }} <br>
                 {% elif a == "Logistica Maritma y portuaria" %}
-                    <p><a href="http://youtube.com">{{ a }}</a></p><br>
+                    <input type="radio" name="pregunta" value="{{ a }}"> {{ a }} <br>
                 {% endif %}
             {% endfor %}
-        </p>
+            <p><input type=submit value=Next></p>
+        </form>
 </body>
 </html>
