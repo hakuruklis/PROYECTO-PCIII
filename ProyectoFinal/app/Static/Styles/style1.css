@@ -32,8 +32,9 @@
     margin-top:20px;
 }
 .encabezado{
+    opacity:0.9;
     height:70px;
-    border:1px dashed blue;
+    border:1px;
     text-align:center;
     font-family:'Lato';
     border-radius:20px;
@@ -48,5 +49,16 @@
     font-weight:bold;
 }
 body{
-    background-image: url("uip1.jpg");
+    height:800px;
+    background-image: url("uipimg1.jpg");
+    background-repeat: no-repeat;
+    background-position: -60px;
+    background-color:#A9D0F5;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border:none;
+}
+html{
+    background-color:#A9D0F5;
 }
