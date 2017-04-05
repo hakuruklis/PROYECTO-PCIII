@@ -5,6 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-    <p>Hola</p>
+    {% if session['name'] %}
+            <p>Hola {{session['name']}}, tu facultad escogida fue {{ facul }}</p><br>
+    {% endif %}
 </body>
 </html>

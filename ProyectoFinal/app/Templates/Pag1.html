@@ -1,11 +1,15 @@
 <!DOCTYPE html>
     <head>
         <title>Prototipo pantalla1 test</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/style2.css') }}">
     </head>
     <Body>
         <div>
+            {% if session['name'] %}
+            Hola {{session['name']}}<br/>
+            {% endif %}
             <p> Hola {{ u }}</p>
-            <form name="myForm" action="/Hola" method="post" onsubmit="">
+            <form name="myForm" action="/escogerCarrera" method="post" onsubmit="">
                 <p>
                 <p>1 ¿Cree tener dotes artísticas? </p>
                     <input type="radio" name="pregunta1" value="si"> Si <br>

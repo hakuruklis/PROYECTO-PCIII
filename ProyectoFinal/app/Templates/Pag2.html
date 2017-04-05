@@ -5,9 +5,12 @@
     <title>Pag2</title>
 </head>
 <body>
-<p> Hola </p>
+<p> Hola {{ nombre }} </p>
+        {% if session['name'] %}
+            Hola {{session['name']}}<br/>
+        {% endif %}
         <p>{{ t }}</p>
-        <form name="myForm" action="/Hola" method="post" onsubmit="">
+        <form name="myForm" action="/SeleccionarFacultad" method="post" onsubmit="">
             {% for a in c %}
                 {% if a == "Comunicacion y disenio" %}
                     <input type="radio" name="pregunta" value="{{ a }}"> {{ a }} <br>

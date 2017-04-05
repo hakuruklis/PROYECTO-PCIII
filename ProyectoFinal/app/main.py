@@ -2,21 +2,24 @@ from flask import Flask
 from flask import render_template
 from flask import request
 from flask import make_response
+from flask import session
 
 app = Flask(__name__)
+
+app.secret_key = 'F12Zr47j\3yX R~X@H!jmM]Lwf/,?KT'
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/iniciar', methods=['POST'])
+@app.route('/iniciarTest', methods=['POST'])
 def iniciar():
     if request.method == 'POST':
-        usuario = request.form['nombre']
-        respuesta = make_response(render_template('pag1.html', u=usuario))
+        session['name'] = request.form['yourname']
+        respuesta = make_response(render_template('pag1.html'))
         return respuesta
 
-@app.route('/Hola', methods=['POST'])
+@app.route('/escogerCarrera', methods=['POST'])
 def test1():
     carreras=[]
     pregunta1 = request.form['pregunta1']
@@ -69,9 +72,17 @@ def test1():
         carrera = 'Logistica Maritma y portuaria'
         carreras.append(carrera)
     cantidad=len(carreras)
-    temp=0
-    respuesta = make_response(render_template('pag2.html', c=carreras, t=cantidad, f=temp))
+
+    respuesta = make_response(render_template('pag2.html', c=carreras, t=cantidad))
     return respuesta
+
+@app.route('/SeleccionarFacultad', methods=['POST'])
+def test2():
+   facultad_final=request.form['pregunta']
+   if facultad_final == 'Comunicacion y disenio':
+       respuesta = make_response(render_template('pag3.html',facul=facultad_final))
+       return respuesta
+
 
 if __name__ == "__main__":
     app.run(debug=True)
