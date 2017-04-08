@@ -80,8 +80,22 @@ def test1():
 def test2():
    facultad_final=request.form['pregunta']
    if facultad_final == 'Comunicacion y disenio':
-       respuesta = make_response(render_template('pag3.html',facul=facultad_final))
-       return respuesta
+       return render_template('pag3.html',facul=facultad_final)
+   elif facultad_final == 'Ciencias Administrativas':
+       return render_template()
+   elif facultad_final == 'Ingenieria y sistemas':
+       return render_template()
+   elif facultad_final == 'Ciencias de la salud':
+       return render_template()
+   elif facultad_final == 'Arquitectura':
+       return render_template()
+   elif facultad_final == 'Derecho y ciencias politicas':
+       return render_template()
+   elif facultad_final == 'Hotelería, Gastronomía y Turismo':
+       return render_template()
+   elif facultad_final == 'Logistica Maritma y portuaria':
+       return render_template()
+
 
 
 if __name__ == "__main__":
