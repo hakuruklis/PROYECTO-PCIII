@@ -47,28 +47,28 @@ def test1():
     pregunta23 = request.form['pregunta23']
     pregunta24 = request.form['pregunta24']
     pregunta25 = request.form['pregunta25']
-    if pregunta1 == "si" and pregunta4 == "si" and pregunta18 == "si":
+    if (pregunta1 == "si" and pregunta4 == "si") or (pregunta1 == "si" and pregunta18 == "si") or (pregunta4 == "si" and pregunta18 == "si"):
         carrera='Comunicacion y disenio'
         carreras.append(carrera)
-    if pregunta2 == "si" and pregunta5 == "si" and pregunta14 == "si":
+    if (pregunta2 == "si" and pregunta5 == "si") or (pregunta2 == "si" and pregunta14 == "si") or (pregunta5 == "si" and pregunta14 == "si"):
         carrera = 'Ciencias Administrativas'
         carreras.append(carrera)
-    if pregunta7 == "si" and pregunta10 == "si" and pregunta15 == "si":
+    if (pregunta7 == "si" and pregunta10 == "si") or (pregunta7 == "si" and pregunta15 == "si") or (pregunta10 == "si" and pregunta15 == "si"):
         carrera = 'Ingenieria y sistemas'
         carreras.append(carrera)
-    if pregunta9 == "si" and pregunta11 == "si" and pregunta21 == "si":
+    if (pregunta9 == "si" and pregunta11 == "si") or (pregunta9 == "si" and pregunta21 == "si") or (pregunta11 == "si" and pregunta21 == "si"):
         carrera = 'Ciencias de la salud'
         carreras.append(carrera)
-    if pregunta6 == "si" and pregunta12 == "si" and pregunta16 == "si":
+    if (pregunta6 == "si" and pregunta12 == "si") or (pregunta6 == "si" and pregunta16 == "si") or (pregunta12 == "si" and pregunta16 == "si"):
         carrera = 'Arquitectura'
         carreras.append(carrera)
-    if pregunta13 == "si" and pregunta17 == "si" and pregunta20 == "si":
+    if (pregunta13 == "si" and pregunta17 == "si") or (pregunta13 == "si" and pregunta20 == "si") or (pregunta17 == "si" and pregunta20 == "si"):
         carrera = 'Derecho y ciencias politicas'
         carreras.append(carrera)
-    if pregunta3 == "si" and pregunta8 == "si" and pregunta19 == "si" and pregunta22 == 'si':
+    if (pregunta3 == "si" and pregunta8 == "si") or (pregunta3 == "si" and pregunta19 == "si") or (pregunta3 == "si" and pregunta22 == "si") or (pregunta8 == "si" and pregunta19 == "si") or (pregunta8== "si" and pregunta22 == "si") or (pregunta19 == "si" and pregunta22 == "si"):
         carrera = 'Hotelería, Gastronomía y Turismo'
         carreras.append(carrera)
-    if pregunta23 == "si" and pregunta24 == "si" and pregunta25 == "si":
+    if (pregunta23 == "si" and pregunta24 == "si") or (pregunta23 == "si" and pregunta25 == "si") or (pregunta24 == "si" and pregunta24 == "si"):
         carrera = 'Logistica Maritma y portuaria'
         carreras.append(carrera)
     cantidad=len(carreras)
@@ -80,23 +80,99 @@ def test1():
 def test2():
    facultad_final=request.form['pregunta']
    if facultad_final == 'Comunicacion y disenio':
-       return render_template('pag3.html',facul=facultad_final)
+       respuesta=make_response(render_template('comunicacion.html',facul=facultad_final))
+       return respuesta
    elif facultad_final == 'Ciencias Administrativas':
-       return render_template()
+       respuesta = make_response(render_template('Ciencias Administrativas.html', facul=facultad_final))
+       return respuesta
    elif facultad_final == 'Ingenieria y sistemas':
-       return render_template()
+       respuesta = make_response(render_template('comunicacion.html', facul=facultad_final))
+       return respuesta
    elif facultad_final == 'Ciencias de la salud':
-       return render_template()
+       respuesta = make_response(render_template('comunicacion.html', facul=facultad_final))
+       return respuesta
    elif facultad_final == 'Arquitectura':
-       return render_template()
+       respuesta = make_response(render_template('Arquitectura.html', facul=facultad_final))
+       return respuesta
    elif facultad_final == 'Derecho y ciencias politicas':
-       return render_template()
+       respuesta = make_response(render_template('Derechos y ciencias politicas.html', facul=facultad_final))
+       return respuesta
    elif facultad_final == 'Hotelería, Gastronomía y Turismo':
-       return render_template()
+       respuesta = make_response(render_template('HGT.html', facul=facultad_final))
+       return respuesta
    elif facultad_final == 'Logistica Maritma y portuaria':
-       return render_template()
+       respuesta = make_response(render_template('Logística, Marítima y Portuaria.html', facul=facultad_final))
+       return respuesta
 
+@app.route('/Comunicacion', methods=['POST'])
+def Comunicacion():
+    pregunta1 = request.form['pregunta1']
+    pregunta2 = request.form['pregunta2']
+    pregunta3 = request.form['pregunta3']
+    pregunta4 = request.form['pregunta4']
+    carreras=[]
+    if pregunta1 == "si":
+        carrera='Lic. en Diseño Gráfico '
+        carreras.append(carrera)
+    if pregunta2 == "si":
+        carrera = 'Lic. en Diseño Gráfico con énfasis en Publicidad y Mercadeo'
+        carreras.append(carrera)
+    if pregunta3 == "si":
+        carrera = 'Lic. en Com. Audiovisual con énfasis en Producción de Radio y TV'
+        carreras.append(carrera)
+    if pregunta4 == "si":
+        carrera = 'Lic. en Publicidad y Mercadeo con énfasis en Imagen Corporativa '
+        carreras.append(carrera)
+    respuesta = make_response(render_template('Carrera Final.html', c=carreras))
+    return respuesta
 
+@app.route('/Arquitectura', methods=['POST'])
+def Arquitectura():
+    pregunta1 = request.form['pregunta1']
+    pregunta2 = request.form['pregunta2']
+    pregunta3 = request.form['pregunta3']
+    pregunta4 = request.form['pregunta4']
+    carreras=[]
+    if pregunta1 == "si" and pregunta3 == "si":
+        carrera='Licenciatura en Arquitectura'
+        carreras.append(carrera)
+    if pregunta2 == "si" and pregunta4 == "si":
+        carrera = 'Licenciatura en Diseño de Interiores'
+        carreras.append(carrera)
+    respuesta = make_response(render_template('Carrera Final.html', c=carreras))
+    return respuesta
+
+@app.route('/Hotelería,GastronomíayTurismo', methods=['POST'])
+def HoteleríaGastronomíayTurismo():
+    pregunta1 = request.form['pregunta1']
+    pregunta2 = request.form['pregunta2']
+    pregunta3 = request.form['pregunta3']
+    carreras=[]
+    if pregunta1 == "si":
+        carrera='1.	Lic. Internacional en Administración de Empresas Hoteleras'
+        carreras.append(carrera)
+    if pregunta2 == "si":
+        carrera = '2.	Lic. Internacional en Administración de Empresas Turísticas'
+        carreras.append(carrera)
+    if pregunta3 == "si":
+        carrera = '3.	Lic. Internacional en Artes Culinarias '
+        carreras.append(carrera)
+    respuesta = make_response(render_template('Carrera Final.html', c=carreras))
+    return respuesta
+
+@app.route('/Derechosycienciaspoliticas', methods=['POST'])
+def Derechosycienciaspoliticas():
+    pregunta1 = request.form['pregunta1']
+    pregunta2 = request.form['pregunta2']
+    carreras=[]
+    if pregunta1 == "si":
+        carrera='1.	Lic. en Derecho y Ciencias Políticas '
+        carreras.append(carrera)
+    if pregunta2 == "si":
+        carrera = '2. Lic. en Criminología '
+        carreras.append(carrera)
+    respuesta = make_response(render_template('Carrera Final.html', c=carreras))
+    return respuesta
 
 if __name__ == "__main__":
     app.run(debug=True)

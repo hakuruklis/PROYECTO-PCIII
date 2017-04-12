@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <head>
+        <title>Hotelería, Gastronomía y Turismo </title>
+        
+    </head>
+    <Body>
+        <div>
+            {% if session['name'] %}
+            Hola {{session['name']}}<br/>
+            {% endif %}
+            <form name="Hotelería,GastronomíayTurismo" action="/Hotelería,GastronomíayTurismo" method="post" onsubmit="">
+                <p>
+                <p>1 ¿Le gusta administrar hospedajes y personal hotelero? </p>
+                    <input type="radio" name="pregunta1" value="si"> Si <br>
+                    <input type="radio" name="pregunta1" value="no"> No <br>
+                </p>
+                <p>2 ¿Le atrae llevar la planeación del turismo de una empresa?</p>
+                    <input type="radio" name="pregunta2" value="si"> Si <br>
+                    <input type="radio" name="pregunta2" value="no"> No <br>
+                </p>
+               
+               <p>3 ¿Es amante de la cocina?</p>
+                    <input type="radio" name="pregunta3" value="si"> Si <br>
+                    <input type="radio" name="pregunta3" value="no"> No <br>
+                </p>
+                </p>
+                <p><input type=submit value=Next></p>
+            </form>
+        </div>
+    </Body>
+</html>

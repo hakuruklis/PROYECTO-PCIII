@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arquitectura</title>
+</head>
+<body>
+    {% if session['name'] %}
+            <p>Hola {{session['name']}}, tu facultad escogida fue {{ facul }}</p><br>
+    {% endif %}
+                <form name="myForm" action="/Arquitectura" method="post" onsubmit="">
+                <p>
+                <p>1 ¿Le gusta dibujar planos?   </p>
+                    <input type="radio" name="pregunta1" value="si"> Si <br>
+                    <input type="radio" name="pregunta1" value="no"> No <br>
+                </p>
+                <p>2 ¿Es detallista y excesivo en la perfección?   </p>
+                    <input type="radio" name="pregunta2" value="si"> Si <br>
+                    <input type="radio" name="pregunta2" value="no"> No <br>
+                </p>
+                <p>3 ¿Le gusta realizar dibujos con precision?  </p>
+                    <input type="radio" name="pregunta3" value="si"> Si <br>
+                    <input type="radio" name="pregunta3" value="no"> No <br>
+                </p>
+                <p>3 ¿Ha pensado en diseñar las partes internas de su casa u oficina? </p>
+                    <input type="radio" name="pregunta3" value="si"> Si <br>
+                    <input type="radio" name="pregunta3" value="no"> No <br>
+                </p>
+                <p><input type=submit value=Next></p>
+            </form>
+
+</body>
+</html>
