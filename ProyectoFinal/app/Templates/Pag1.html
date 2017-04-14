@@ -6,112 +6,111 @@
     <Body>
         <div>
             {% if session['name'] %}
-            Hola {{session['name']}}<br/>
+            <h2>Hola {{session['name']}}, este es un teste de orientacion vocaional, responde las siguientes preguntas y el programas te generara una facultad a escoger</h2><br/>
             {% endif %}
-            <p> Hola {{ u }}</p>
+            <p>Okay empezemos</p>
             <form name="myForm" action="/escogerCarrera" method="post" onsubmit="">
-                <p>
-                <p>1 ¿Cree tener dotes creativos o artisitcos? </p>
+                <p class="pregunta">1 ¿Cree tener dotes creativos o artisitcos? </p>
                     <input type="radio" name="pregunta1" value="si"> Si <br>
                     <input type="radio" name="pregunta1" value="no"> No <br>
                 </p>
-                <p>2 ¿Tiene facilidad para resolver problemas numéricos? </p>
+                <p class="pregunta">2 ¿Tiene facilidad para resolver problemas numéricos? </p>
                     <input type="radio" name="pregunta2" value="si"> Si <br>
                     <input type="radio" name="pregunta2" value="no"> No <br>
                 </p>
-                <p>3 ¿Le gusta ser servicial con las visitas en casa? </p>
+                <p class="pregunta">3 ¿Le gusta ser servicial con las visitas en casa? </p>
                     <input type="radio" name="pregunta3" value="si"> Si <br>
                     <input type="radio" name="pregunta3" value="no"> No <br>
                 </p>
-                <p>4 ¿Es bueno con los trabajos manuales?  </p>
+                <p class="pregunta">4 ¿Es bueno con los trabajos manuales?  </p>
                     <input type="radio" name="pregunta4" value="si"> Si <br>
                     <input type="radio" name="pregunta4" value="no"> No <br>
                 </p>
-                <p>5 ¿Administra bien su dinero? </p>
+                <p class="pregunta">5 ¿Administra bien su dinero? </p>
                     <input type="radio" name="pregunta5" value="si"> Si <br>
                     <input type="radio" name="pregunta5" value="no"> No <br>
                 </p>
-                <p>6 ¿Se le facilita realizar modelos a escala? </p>
+                <p class="pregunta">6 ¿Se le facilita realizar modelos a escala? </p>
                     <input type="radio" name="pregunta6" value="si"> Si <br>
                     <input type="radio" name="pregunta6" value="no"> No <br>
                 </p>
-                <p>7 ¿Maneja perfectamente los programas de su computador? </p>
+                <p class="pregunta">7 ¿Maneja perfectamente los programas de su computador? </p>
                     <input type="radio" name="pregunta7" value="si"> Si <br>
                     <input type="radio" name="pregunta7" value="no"> No <br>
                 </p>
-                <p>8 ¿Le gusta preparar postres y cocinar? </p>
+                <p class="pregunta">8 ¿Le gusta preparar postres y cocinar? </p>
                     <input type="radio" name="pregunta8" value="si"> Si <br>
                     <input type="radio" name="pregunta8" value="no"> No <br>
                 </p>
-                <p>9 ¿Responde tranquilamente a situaciones de urgencia y emergencia? </p>
+                <p class="pregunta">9 ¿Responde tranquilamente a situaciones de urgencia y emergencia? </p>
                     <input type="radio" name="pregunta9" value="si"> Si <br>
                     <input type="radio" name="pregunta9" value="no"> No <br>
                 </p>
-                <p>10 ¿Es capaz de reparar algún aparato eléctrico? </p>
+                <p class="pregunta">10 ¿Es capaz de reparar algún aparato eléctrico? </p>
                     <input type="radio" name="pregunta10" value="si"> Si <br>
                     <input type="radio" name="pregunta10" value="no"> No <br>
                 </p>
-                <p>11 ¿Participa en actividades y programas sociales? </p>
+                <p class="pregunta">11 ¿Participa en actividades y programas sociales? </p>
                     <input type="radio" name="pregunta11" value="si"> Si <br>
                     <input type="radio" name="pregunta11" value="no"> No <br>
                 </p>
-                <p>12 ¿Entiende de medidas y puntos cardinales? </p>
+                <p class="pregunta">12 ¿Entiende de medidas y puntos cardinales? </p>
                     <input type="radio" name="pregunta12" value="si"> Si <br>
                     <input type="radio" name="pregunta12" value="no"> No <br>
                 </p>
-                <p>13¿Conoce las leyes y el manejo político del país? </p>
+                <p class="pregunta">13¿Conoce las leyes y el manejo político del país? </p>
                     <input type="radio" name="pregunta13" value="si"> Si <br>
                     <input type="radio" name="pregunta13" value="no"> No <br>
                 </p>
-                <p>14 ¿Tiene habilidad para las ventas? </p>
+                <p class="pregunta">14 ¿Tiene habilidad para las ventas? </p>
                     <input type="radio" name="pregunta14" value="si"> Si <br>
                     <input type="radio" name="pregunta14" value="no"> No <br>
                 </p>
-                <p>15 ¿Se le facilita el manejo de aparatos tecnológicos? </p>
+                <p class="pregunta">15 ¿Se le facilita el manejo de aparatos tecnológicos? </p>
                     <input type="radio" name="pregunta15" value="si"> Si <br>
                     <input type="radio" name="pregunta15" value="no"> No <br>
                 </p>
-                <p>16 ¿Le gusta dibujar planos? </p>
+                <p class="pregunta">16 ¿Le gusta dibujar planos? </p>
                     <input type="radio" name="pregunta16" value="si"> Si <br>
                     <input type="radio" name="pregunta16" value="no"> No <br>
                 </p>
-                <p>17 ¿Posee habilidades para investigar y persuadir a la gente? </p>
+                <p class="pregunta">17 ¿Posee habilidades para investigar y persuadir a la gente? </p>
                     <input type="radio" name="pregunta17" value="si"> Si <br>
                     <input type="radio" name="pregunta17" value="no"> No <br>
                 </p>
-                <p>18 ¿Le gusta la edicion de fotos o videos? </p>
+                <p class="pregunta">18 ¿Le gusta la edicion de fotos o videos? </p>
                     <input type="radio" name="pregunta18" value="si"> Si <br>
                     <input type="radio" name="pregunta18" value="no"> No <br>
                 </p>
-                <p>19 ¿Es experto en destinos turísticos? </p>
+                <p class="pregunta">19 ¿Es experto en destinos turísticos? </p>
                     <input type="radio" name="pregunta19" value="si"> Si <br>
                     <input type="radio" name="pregunta19" value="no"> No <br>
                 </p>
-                <p>20 ¿Tiene capacidad de liderazgo? </p>
+                <p class="pregunta">20 ¿Tiene capacidad de liderazgo? </p>
                     <input type="radio" name="pregunta20" value="si"> Si <br>
                     <input type="radio" name="pregunta20" value="no"> No <br>
                 </p>
-                <p>21 ¿Es entregado y comprometido con los otros seres humanos? </p>
+                <p class="pregunta">21 ¿Es entregado y comprometido con los otros seres humanos? </p>
                     <input type="radio" name="pregunta21" value="si"> Si <br>
                     <input type="radio" name="pregunta21" value="no"> No <br>
                 </p>
-                <p>22 ¿Le gusta hablar otros idiomas? </p>
+                <p class="pregunta">22 ¿Le gusta hablar otros idiomas? </p>
                     <input type="radio" name="pregunta22" value="si"> Si <br>
                     <input type="radio" name="pregunta22" value="no"> No <br>
                 </p>
-                <p>23 ¿Le gusta planear estrategias? </p>
+                <p class="pregunta">23 ¿Le gusta planear estrategias? </p>
                     <input type="radio" name="pregunta23" value="si"> Si <br>
                     <input type="radio" name="pregunta23" value="no"> No <br>
                 </p>
-                <p>24 ¿Es una persona que le atrae todo lo relacionado con puertos y transito marítimo? </p>
+                <p class="pregunta">24 ¿Es una persona que le atrae todo lo relacionado con puertos y transito marítimo? </p>
                     <input type="radio" name="pregunta24" value="si"> Si <br>
                     <input type="radio" name="pregunta24" value="no"> No <br>
                 </p>
-                <p>25 ¿Es una persona analítica de mejoras de servicio? </p>
+                <p class="pregunta">25 ¿Es una persona analítica de mejoras de servicio? </p>
                     <input type="radio" name="pregunta25" value="si"> Si <br>
                     <input type="radio" name="pregunta25" value="no"> No <br>
                 </p>
-                <p><input type=submit value=Next></p>
+                <p><input class="boton" type=submit value=Next></p>
             </form>
         </div>
     </Body>

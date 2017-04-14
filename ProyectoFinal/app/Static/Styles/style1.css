@@ -27,6 +27,9 @@
     font-weight:bold;
     font-size:18px;
 }
+#boton:hover{
+    background-color:green;
+}
 #txt{
     margin-left:120px;
     margin-top:20px;

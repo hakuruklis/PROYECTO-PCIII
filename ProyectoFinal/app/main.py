@@ -71,9 +71,7 @@ def test1():
     if (pregunta23 == "si" and pregunta24 == "si") or (pregunta23 == "si" and pregunta25 == "si") or (pregunta24 == "si" and pregunta24 == "si"):
         carrera = 'Logistica Maritma y portuaria'
         carreras.append(carrera)
-    cantidad=len(carreras)
-
-    respuesta = make_response(render_template('pag2.html', c=carreras, t=cantidad))
+    respuesta = make_response(render_template('pag2.html', c=carreras))
     return respuesta
 
 @app.route('/SeleccionarFacultad', methods=['POST'])
@@ -170,6 +168,56 @@ def Derechosycienciaspoliticas():
         carreras.append(carrera)
     if pregunta2 == "si":
         carrera = '2. Lic. en Criminología '
+        carreras.append(carrera)
+    respuesta = make_response(render_template('Carrera Final.html', c=carreras))
+    return respuesta
+
+@app.route('/CienciasAdministraciones', methods=['POST'])
+def CienciasAdministraciones():
+    carreras=[]
+    pregunta1 = request.form['pregunta1']
+    pregunta2 = request.form['pregunta2']
+    pregunta3 = request.form['pregunta3']
+    pregunta4 = request.form['pregunta4']
+    pregunta5 = request.form['pregunta5']
+    pregunta6 = request.form['pregunta6']
+    pregunta7 = request.form['pregunta7']
+    pregunta8 = request.form['pregunta8']
+    pregunta9 = request.form['pregunta9']
+    pregunta10 = request.form['pregunta10']
+    pregunta11 = request.form['pregunta11']
+    if pregunta1 == "si":
+        carrera='1.	Lic. en Administración de Negocios'
+        carreras.append(carrera)
+    if pregunta2 == "si":
+        carrera= '2. Lic. en Contabilidad '
+        carreras.append(carrera)
+    if pregunta3 == "si":
+        carrera='3.	Lic. en Administración de Recursos Humanos '
+        carreras.append(carrera)
+    if pregunta4 == "si":
+        carrera ='4. Lic. en Banca y Finanzas '
+        carreras.append(carrera)
+    if pregunta5 == "si":
+        carrera='5.	Lic. en Comercio Internacional '
+        carreras.append(carrera)
+    if pregunta6 == "si":
+        carrera = '6. Lic. en Negocios Internacionales '
+        carreras.append(carrera)
+    if pregunta7 == "si":
+        carrera='7.	Lic. en Ingeniería Comercial Lic. en Comportamiento Organizacional y Desarrollo Humano '
+        carreras.append(carrera)
+    if pregunta8 == "si":
+        carrera = '8.Lic. en Global Business '
+        carreras.append(carrera)
+    if pregunta9 == "si":
+        carrera='9.	Lic. en Administración de Empresas Turísticas'
+        carreras.append(carrera)
+    if pregunta10 == "si":
+        carrera = '10.	Lic. en Mercadeo y Publicidad'
+        carreras.append(carrera)
+    if pregunta11 == "si":
+        carrera='11.Lic. en Mercadeo y Ventas'
         carreras.append(carrera)
     respuesta = make_response(render_template('Carrera Final.html', c=carreras))
     return respuesta

@@ -2,35 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pag2</title>
+    <title>Seleccionar Facultad</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/style3.css') }}">
 </head>
 <body>
-<p> Hola {{ nombre }} </p>
+<div>
         {% if session['name'] %}
-            Hola {{session['name']}}<br/>
+           <h2>Okay {{session['name']}} segun el test esta son las facultades que se acomodana a tu actitud</h2>
         {% endif %}
-        <p>{{ t }}</p>
+            <h3>Escge al facultad que mas te llame la atencion para pasar al test que escogera tu carrera indicada</h3>
         <form name="myForm" action="/SeleccionarFacultad" method="post" onsubmit="">
             {% for a in c %}
                 {% if a == "Comunicacion y disenio" %}
-                    <input type="radio" name="pregunta" value="{{ a }}"> {{ a }} <br>
+                    <p class="facultad"><input type="radio" name="pregunta" value="{{ a }}">{{ a }}</p>
                 {% elif a == "Ciencias Administrativas" %}
-                    <input type="radio" name="pregunta" value="{{ a }}"> {{ a }} <br>
+                    <p class="facultad"><input type="radio" name="pregunta" value="{{ a }}">{{ a }}</p>
                 {% elif a == "Ingenieria y sistemas" %}
-                    <input type="radio" name="pregunta" value="{{ a }}"> {{ a }} <br>
+                    <p class="facultad"><input type="radio" name="pregunta" value="{{ a }}">{{ a }}</p>
                 {% elif a == "Ciencias de la salud" %}
-                    <input type="radio" name="pregunta" value="{{ a }}"> {{ a }} <br>
+                    <p class="facultad"><input type="radio" name="pregunta" value="{{ a }}">{{ a }}</p>
                 {% elif a == "Arquitectura" %}
-                    <input type="radio" name="pregunta" value="{{ a }}"> {{ a }} <br>
+                    <p class="facultad"><input type="radio" name="pregunta" value="{{ a }}">{{ a }}</p>
                 {% elif a == "Derecho y ciencias politicas" %}
-                    <input type="radio" name="pregunta" value="{{ a }}"> {{ a }} <br>
+                    <p class="facultad"><input type="radio" name="pregunta" value="{{ a }}">{{ a }}</p>
                 {% elif a == "Hotelería, Gastronomía y Turismo" %}
-                    <input type="radio" name="pregunta" value="{{ a }}"> {{ a }} <br>
+                    <p class="facultad"><input type="radio" name="pregunta" value="{{ a }}">{{ a }}</p>
                 {% elif a == "Logistica Maritma y portuaria" %}
-                    <input type="radio" name="pregunta" value="{{ a }}"> {{ a }} <br>
+                    <p class="facultad"><input type="radio" name="pregunta" value="{{ a }}">{{ a }}</p>
                 {% endif %}
             {% endfor %}
-            <p><input type=submit value=Next></p>
+            <p><input id="boton" type=submit value=Next></p>
         </form>
+</div>
 </body>
 </html>

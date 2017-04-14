@@ -7,7 +7,6 @@ html{
     padding-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
-    font-family:'Lato',cursive;
 }
 div{
     background-color:white;
@@ -19,16 +18,16 @@ div{
     width:750px;
     margin:auto;
 }
-.pregunta{
+h3{
     font-family:'Lato', cursive;
 }
 h2{
     font-family:'Lato', cursive;
 }
-p{
+.facultad{
     font-family:'Lato', cursive;
 }
-.boton{
+#boton{
     height:50px;
     width:175px;
     border-radius:80px;
@@ -40,6 +39,4 @@ p{
     font-weight:bold;
     font-size:18px;
 }
-.boton:hover{
-    background-color:green;
-}
+
