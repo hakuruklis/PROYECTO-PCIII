@@ -1,12 +1,12 @@
 <!DOCTYPE html>
     <head>
         <title>Hotelería, Gastronomía y Turismo </title>
-        
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/style4.css') }}">
     </head>
     <Body>
         <div>
             {% if session['name'] %}
-            Hola {{session['name']}}<br/>
+            <h2>Hola {{session['name']}}, tu facultad escogida fue {{ facul }}</h2><br>
             {% endif %}
             <form name="Hotelería,GastronomíayTurismo" action="/Hotelería,GastronomíayTurismo" method="post" onsubmit="">
                 <p>
@@ -24,7 +24,7 @@
                     <input type="radio" name="pregunta3" value="no"> No <br>
                 </p>
                 </p>
-                <p><input type=submit value=Next></p>
+                <p><input id="boton" type=submit value=Next></p>
             </form>
         </div>
     </Body>

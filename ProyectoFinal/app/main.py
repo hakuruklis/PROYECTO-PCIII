@@ -84,7 +84,7 @@ def test2():
        respuesta = make_response(render_template('Ciencias Administrativas.html', facul=facultad_final))
        return respuesta
    elif facultad_final == 'Ingenieria y sistemas':
-       respuesta = make_response(render_template('comunicacion.html', facul=facultad_final))
+       respuesta = make_response(render_template('Sistemas.html', facul=facultad_final))
        return respuesta
    elif facultad_final == 'Ciencias de la salud':
        respuesta = make_response(render_template('comunicacion.html', facul=facultad_final))
@@ -147,13 +147,13 @@ def HoteleríaGastronomíayTurismo():
     pregunta3 = request.form['pregunta3']
     carreras=[]
     if pregunta1 == "si":
-        carrera='1.	Lic. Internacional en Administración de Empresas Hoteleras'
+        carrera='Lic. Internacional en Administración de Empresas Hoteleras'
         carreras.append(carrera)
     if pregunta2 == "si":
-        carrera = '2.	Lic. Internacional en Administración de Empresas Turísticas'
+        carrera = 'Lic. Internacional en Administración de Empresas Turísticas'
         carreras.append(carrera)
     if pregunta3 == "si":
-        carrera = '3.	Lic. Internacional en Artes Culinarias '
+        carrera = 'Lic. Internacional en Artes Culinarias '
         carreras.append(carrera)
     respuesta = make_response(render_template('Carrera Final.html', c=carreras))
     return respuesta
@@ -164,10 +164,10 @@ def Derechosycienciaspoliticas():
     pregunta2 = request.form['pregunta2']
     carreras=[]
     if pregunta1 == "si":
-        carrera='1.	Lic. en Derecho y Ciencias Políticas '
+        carrera='Lic. en Derecho y Ciencias Políticas '
         carreras.append(carrera)
     if pregunta2 == "si":
-        carrera = '2. Lic. en Criminología '
+        carrera = 'Lic. en Criminología'
         carreras.append(carrera)
     respuesta = make_response(render_template('Carrera Final.html', c=carreras))
     return respuesta
@@ -187,40 +187,95 @@ def CienciasAdministraciones():
     pregunta10 = request.form['pregunta10']
     pregunta11 = request.form['pregunta11']
     if pregunta1 == "si":
-        carrera='1.	Lic. en Administración de Negocios'
+        carrera='Lic. en Administración de Negocios'
         carreras.append(carrera)
     if pregunta2 == "si":
-        carrera= '2. Lic. en Contabilidad '
+        carrera= 'Lic. en Contabilidad '
         carreras.append(carrera)
     if pregunta3 == "si":
-        carrera='3.	Lic. en Administración de Recursos Humanos '
+        carrera='Lic. en Administración de Recursos Humanos '
         carreras.append(carrera)
     if pregunta4 == "si":
-        carrera ='4. Lic. en Banca y Finanzas '
+        carrera ='Lic. en Banca y Finanzas '
         carreras.append(carrera)
     if pregunta5 == "si":
-        carrera='5.	Lic. en Comercio Internacional '
+        carrera='Lic. en Comercio Internacional '
         carreras.append(carrera)
     if pregunta6 == "si":
-        carrera = '6. Lic. en Negocios Internacionales '
+        carrera = 'Lic. en Negocios Internacionales '
         carreras.append(carrera)
     if pregunta7 == "si":
-        carrera='7.	Lic. en Ingeniería Comercial Lic. en Comportamiento Organizacional y Desarrollo Humano '
+        carrera='Lic. en Ingeniería Comercial Lic. en Comportamiento Organizacional y Desarrollo Humano '
         carreras.append(carrera)
     if pregunta8 == "si":
-        carrera = '8.Lic. en Global Business '
+        carrera = 'Lic. en Global Business '
         carreras.append(carrera)
     if pregunta9 == "si":
-        carrera='9.	Lic. en Administración de Empresas Turísticas'
+        carrera='Lic. en Administración de Empresas Turísticas'
         carreras.append(carrera)
     if pregunta10 == "si":
-        carrera = '10.	Lic. en Mercadeo y Publicidad'
+        carrera = 'Lic. en Mercadeo y Publicidad'
         carreras.append(carrera)
     if pregunta11 == "si":
-        carrera='11.Lic. en Mercadeo y Ventas'
+        carrera='Lic. en Mercadeo y Ventas'
         carreras.append(carrera)
     respuesta = make_response(render_template('Carrera Final.html', c=carreras))
     return respuesta
+
+# @app.route('/LMP', methods=['POST'])
+# def LMP():
+#     pregunta1 = request.form['pregunta1']
+#     pregunta2 = request.form['pregunta2']
+#     pregunta3 = request.form['pregunta3']
+#     pregunta4 = request.form['pregunta4']
+#     carreras=[]
+#     if pregunta1 == "si":
+#         carrera='1.	Lic. en Administración Marítima y Portuaria '
+#         carreras.append(carrera)
+#     if pregunta2 == "si":
+#         carrera= '2. Lic. en Contabilidad '
+#         carreras.append(carrera)
+#     if pregunta3 == "si":
+#         carrera='3.	Lic. en Administración de Recursos Humanos '
+#         carreras.append(carrera)
+#     if pregunta4 == "si":
+#         carrera ='4. Lic. en Banca y Finanzas '
+#         carreras.append(carrera)
+
+@app.route('/Ingenieria', methods=['POST'])
+def ingenieria():
+    carreras = []
+    pregunta1 = request.form['pregunta1']
+    pregunta2 = request.form['pregunta2']
+    pregunta3 = request.form['pregunta3']
+    pregunta4 = request.form['pregunta4']
+    pregunta5 = request.form['pregunta5']
+    pregunta6 = request.form['pregunta6']
+    pregunta7 = request.form['pregunta7']
+    if pregunta1 == "si":
+        carrera = 'Lic. en Ing. de Redes y Datos con énfasis en Sistemas Inalámbricos '
+        carreras.append(carrera)
+    if pregunta2 == "si":
+        carrera = 'Lic. en Ingeniería en Sistemas Computacionales '
+        carreras.append(carrera)
+    if pregunta3 == "si":
+        carrera = 'Lic. en Ingeniería en Electrónica y Comunicaciones '
+        carreras.append(carrera)
+    if pregunta4 == "si":
+        carrera = 'Lic. en Ingeniería en Industrial con énfasis en Gestión de Calidad'
+        carreras.append(carrera)
+    if pregunta5 == "si":
+        carrera = 'Lic. en Ingeniería en Industrial con énfasis en Gestión de Operaciones '
+        carreras.append(carrera)
+    if pregunta6 == "si":
+        carrera = 'Lic. en Ingeniería Industrial y de Sistemas '
+        carreras.append(carrera)
+    if pregunta7 == "si":
+        carrera = 'Lic. en Sistemas Comp. con énfasis en Desarrollo de Sistemas Avanzados de Redes y Software '
+        carreras.append(carrera)
+    respuesta = make_response(render_template('Carrera Final.html', c=carreras))
+    return respuesta
+
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -7,6 +7,9 @@ html{
     padding-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
+    background-image: url("uipimg1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 div{
     background-color:white;
@@ -17,6 +20,10 @@ div{
     border-radius: 50px 10px 50px 10px;
     width:750px;
     margin:auto;
+    -webkit-box-shadow: 13px 15px 5px -2px rgba(0,0,0,0.59);
+    -moz-box-shadow: 13px 15px 5px -2px rgba(0,0,0,0.59);
+    box-shadow: 13px 15px 5px -2px rgba(0,0,0,0.59);
+    opacity:0.99;
 }
 h3{
     font-family:'Lato', cursive;
@@ -26,6 +33,11 @@ h2{
 }
 .facultad{
     font-family:'Lato', cursive;
+}
+.facultad:hover{
+    font-weight:bold;
+    color:black;
+    font-size:15px;
 }
 #boton{
     height:50px;
@@ -39,4 +51,7 @@ h2{
     font-weight:bold;
     font-size:18px;
 }
-
+#boton:hover{
+    background-color:green;
+    border: 2px solid green;
+}

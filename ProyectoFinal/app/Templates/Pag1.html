@@ -4,11 +4,12 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/style2.css') }}">
     </head>
     <Body>
-        <div>
-            {% if session['name'] %}
-            <h2>Hola {{session['name']}}, este es un teste de orientacion vocaional, responde las siguientes preguntas y el programas te generara una facultad a escoger</h2><br/>
+        {% if session['name'] %}
+            <h2>Hola {{session['name']}}, este es un test de orientacion vocacional, responde las siguientes preguntas y el programas te generara una facultad a escoger</h2><br/>
             {% endif %}
-            <p>Okay empezemos</p>
+        <div>
+
+            <p class="p">Okay empezemos</p>
             <form name="myForm" action="/escogerCarrera" method="post" onsubmit="">
                 <p class="pregunta">1 ¿Cree tener dotes creativos o artisitcos? </p>
                     <input type="radio" name="pregunta1" value="si"> Si <br>

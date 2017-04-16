@@ -1,8 +1,27 @@
 <html>
+<head>
+    <title>Carrera Final</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/style5.css') }}">
+</head>
     <body>
-    <p> Tu carrera final es: {{ carrera_final }}</p>
+    <div class="Encabezado">
+            <h2>Listo {{session['name']}}, hemos encontrado tu carrera(s) universitaria</h2><br>
+    </div>
+        <br>
+    <div class="Cuerpo">
+    <h5> Tu carrera final es:</h5>
+        <ul>
         {% for a in c %}
-            <p>{{ a }}</p><br>
+            <!--{% if a == "Lic. en Derecho y Ciencias Políticas " %}
+                <li><a href="http://www.uip.edu.pa/lic-en-derecho-y-ciencias-politicas/">{{ a }}</a></li>
+            {% elif a == "Lic. en Criminología" %}
+                <li><a href="http://www.uip.edu.pa/criminologia/">{{ a }}</a></li>
+            {% endif %}
+            -->
+            <li>{{ a }}</li>
         {% endfor %}
+        </ul>
+        <h5> Escoge una, haz clic sobre ella, te llevara a la pagina de la universidad para que veas mas informacion</h5>
+    </div>
     </body>
 </html>

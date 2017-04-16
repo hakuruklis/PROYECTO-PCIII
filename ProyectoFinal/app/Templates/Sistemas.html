@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingenieria y Sistemas</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/style4.css') }}">
+</head>
+<body>
+<div>
+{% if session['name'] %}
+            <h2>Hola {{session['name']}}, tu facultad escogida fue {{ facul }}</h2><br>
+    {% endif %}
+<form action="/Ingenieria", method = 'POST'>
+    <p><h2>Porfavor, responda las preguntas acontinuación: </h2></p>
+    <p class="pregunta">1. ¿Se ha interesado por tecnologías inalámbricas?</p>
+    <p><input type="radio", name="pregunta1", value="si">Si</p>
+    <p><input type="radio", name="pregunta1", value="No">No</p>
+    <p class="pregunta">2. ¿Le ha llegado a gustar así sea un (1) lenguaje de programación o la programación en sí misma?</p>
+    <p><input type="radio", name="pregunta2", value="si">Si</p>
+    <p><input type="radio", name="pregunta2", value="No">No</p>
+    <p class="pregunta">3. ¿Le gusta armar y desarmar aparatos electrónicos?</p>
+    <p><input type="radio", name="pregunta3", value="si">Si</p>
+    <p><input type="radio", name="pregunta3", value="No">No</p>
+    <p class="pregunta">4. ¿Le gusta llevar el desarrollo y control de un proyecto y ser perfeccionista? </p>
+    <p><input type="radio", name="pregunta4", value="si">Si</p>
+    <p><input type="radio", name="pregunta4", value="No">No</p>
+    <p class="pregunta">5. ¿Le atraería administrar las operaciones de una empresa netamente de producción?</p>
+    <p><input type="radio", name="pregunta5", value="si">Si</p>
+    <p><input type="radio", name="pregunta5", value="No">No</p>
+    <p class="pregunta">6. ¿Administraría una empresa tecnológica, viéndose más enfocado en la parte administrativa?</p>
+    <p><input type="radio", name="pregunta6", value="si">Si</p>
+    <p><input type="radio", name="pregunta6", value="No">No</p>
+    <p class="pregunta">7. ¿Le gustaría Gerenciar proyectos de infraestructura de redes y de paso programar los sistemas de las mismas?</p>
+    <p><input type="radio", name="pregunta7", value="si">Si</p>
+    <p><input type="radio", name="pregunta7", value="No">No</p>
+    <p><input type="submit", name="enviar", value="Siguiente"></p>
+</form>
+</div>
+</body>
+</html>

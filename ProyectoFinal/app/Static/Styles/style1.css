@@ -5,7 +5,7 @@
     height:400px;
     width:400px;
     margin:auto;
-    background-color:#5858FA;
+    background-color:blue;
     border-radius: 90px 10px 90px 10px;
     -moz-border-radius: 90px 10px 90px 10px;
     -webkit-border-radius: 90px 10px 90px 10px;
@@ -29,6 +29,8 @@
 }
 #boton:hover{
     background-color:green;
+    font-size:20px;
+    border: 2px solid green;
 }
 #txt{
     margin-left:120px;
@@ -42,6 +44,7 @@
     font-family:'Lato';
     border-radius:20px;
     background-color:#FFFFFF;
+    padding:5px;
 }
 #titulo{
     font-family:'Lato';

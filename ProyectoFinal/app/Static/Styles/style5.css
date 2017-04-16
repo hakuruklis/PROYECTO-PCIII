@@ -12,35 +12,31 @@ html{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-div{
+.Encabezado{
+    font-family:'Lato', cursive;
+    background-color:blue;
+    padding:10px;
+    border-radius: 20px 5px 20px 5px;
+    color:white;
+    width:750px;
+    margin:auto;
+    -webkit-box-shadow: 13px 15px 5px -2px rgba(0,0,0,0.59);
+    -moz-box-shadow: 13px 15px 5px -2px rgba(0,0,0,0.59);
+    box-shadow: 13px 15px 5px -2px rgba(0,0,0,0.59);
+    opacity:0.99;
+    text-align:center;
+}
+.Cuerpo{
     background-color:white;
     padding-top: 15px;
     padding-left: 25px;
     padding-right: 15px;
     padding-bottom: 20px;
     border-radius: 50px 10px 50px 10px;
-    width:750px;
+    width:400px;
     margin:auto;
 }
-.pregunta{
-    font-family:'Lato', cursive;
-}
-h2{
-    font-family:'Lato', cursive;
-}
-#boton{
-    height:50px;
-    width:175px;
-    border-radius:80px;
-    background-color:#64FE2E;
-    border: 2px solid #64FE2E;
-    font-family:'Lato';
-    margin-left:287.5px;
-    color:#FFFFFF;
+li:hover{
+    font-size:17px;
     font-weight:bold;
-    font-size:18px;
-}
-#boton:hover{
-    background-color:green;
-    border: 2px solid green;
 }

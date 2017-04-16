@@ -1,34 +1,34 @@
 <!DOCTYPE html>
     <head>
         <title>Logística, Marítima y Portuaria  </title>
-        
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/style4.css') }}">
     </head>
     <Body>
         <div>
             {% if session['name'] %}
-            Hola {{session['name']}}<br/>
+            <h2>Hola {{session['name']}}, tu facultad escogida fue {{ facul }}</h2><br>
             {% endif %}
-            <form name="Logística,MarítimayPortuaria" action="/SeleccionarFalcultad" method="post" onsubmit="">
+            <form name="Logística,MarítimayPortuaria" action="/LMP" method="post" onsubmit="">
                 <p>
-                <p>1 ¿Le gustaría administrar empresas portuarias? Si / No    </p>
+                <p>1 ¿Le gustaría administrar empresas portuarias?</p>
                     <input type="radio" name="pregunta1" value="si"> Si <br>
                     <input type="radio" name="pregunta1" value="no"> No <br>
                 </p>
-                <p>2 Le atrae ejercer en labores de puertos? Si / No    </p>
+                <p>2 Le atrae ejercer en labores de puertos?</p>
                     <input type="radio" name="pregunta2" value="si"> Si <br>
                     <input type="radio" name="pregunta2" value="no"> No <br>
                 </p>
                
-               <p>3 ¿Es amante de la logística o del transporte marino y portuario? Si / No   </p>
-                    <input type="radio" name="pregunta2" value="si"> Si <br>
-                    <input type="radio" name="pregunta2" value="no"> No <br>
+               <p>3 ¿Es amante de la logística o del transporte marino y portuario?</p>
+                    <input type="radio" name="pregunta3" value="si"> Si <br>
+                    <input type="radio" name="pregunta3" value="no"> No <br>
                 </p>
-                <p>4 ¿Le fascina planear las rutas y asumir responsabilidad de llegada y envió de pedidos? Si / No    </p>
-                    <input type="radio" name="pregunta2" value="si"> Si <br>
-                    <input type="radio" name="pregunta2" value="no"> No <br>
+                <p>4 ¿Le fascina planear las rutas y asumir responsabilidad de llegada y envió de pedidos?</p>
+                    <input type="radio" name="pregunta4" value="si"> Si <br>
+                    <input type="radio" name="pregunta4" value="no"> No <br>
                 </p>
                 </p>
-                <p><input type=submit value=Next></p>
+                <p><input id="boton" type=submit value=Next></p>
             </form>
         </div>
     </Body>
