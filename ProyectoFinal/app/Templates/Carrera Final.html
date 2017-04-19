@@ -12,13 +12,83 @@
     <h5> Tu carrera final es:</h5>
         <ul>
         {% for a in c %}
-            <!--{% if a == "Lic. en Derecho y Ciencias Políticas " %}
+            {% if a == "Lic. en Derecho y Ciencias Políticas " %}
                 <li><a href="http://www.uip.edu.pa/lic-en-derecho-y-ciencias-politicas/">{{ a }}</a></li>
             {% elif a == "Lic. en Criminología" %}
                 <li><a href="http://www.uip.edu.pa/criminologia/">{{ a }}</a></li>
+            {% elif a == "Lic. en Diseño Gráfico " %}
+                <li><a href="http://www.uip.edu.pa/lic-en-diseno-grafico/">{{ a }}</a></li>
+            {% elif a == "Lic. en Diseño Gráfico con énfasis en Publicidad y Mercadeo" %}
+                <li><a href="http://www.uip.edu.pa/lic-en-diseno-grafico-con-enfasis-en-publicidad-y-mercadeo/">{{ a }}</a></li>
+            {% elif a == "Lic. en Com. Audiovisual con énfasis en Producción de Radio y TV" %}
+                <li><a href="http://www.uip.edu.pa/lic-en-comunicacion-con-enfasis-en-radio-y-television/">{{ a }}</a></li>
+            {% elif a == "Lic. en Publicidad y Mercadeo con énfasis en Imagen Corporativa " %}
+                <li><a href="http://www.uip.edu.pa/lic-en-publicidad-y-mercadeo-con-enfasis-en-imagen-corporativa/">{{ a }}</a></li>
+            {% elif a == "Licenciatura en Arquitectura" %}
+                <li><a href="http://www.uip.edu.pa/index.php/lic-en-arquitectura/">{{ a }}</a></li>
+            {% elif a == "Licenciatura en Diseño de Interiores" %}
+                <li><a href="http://www.uip.edu.pa/lic-en-diseno-de-interiores/">{{ a }}</a></li>
+            {% elif a == "Lic. Internacional en Administración de Empresas Hoteleras" %}
+                <li><a href="http://www.uip.edu.pa/lic-internacional-en-administracion-de-empresas-hoteleras/">{{ a }}</a></li>
+            {% elif a == "Lic. Internacional en Administración de Empresas Turísticas" %}
+                <li><a href="http://www.uip.edu.pa/facultad-de-gastronomia-hoteleria-y-turismo-2/">{{ a }}</a></li>
+            {% elif a == "Lic. Internacional en Artes Culinarias " %}
+                <li><a href="http://www.uip.edu.pa/lic-internacional-en-artes-culinarias/">{{ a }}</a></li>
+            {% elif a == "Lic. en Administración de Negocios" %}
+                <li><a href="http://www.uip.edu.pa/lic-en-administracion-de-negocios/">{{ a }}</a></li>
+            {% elif a == "Lic. en Contabilidad " %}
+                <li><a href="http://www.uip.edu.pa/lic-en-contabilidad/">{{ a }}</a></li>
+            {% elif a == "Lic. en Administración de Recursos Humanos " %}
+                <li><a href="http://www.uip.edu.pa/lic-en-administracion-de-recursos-humanos/">{{ a }}</a></li>
+            {% elif a == "Lic. en Banca y Finanzas " %}
+                <li><a href="http://www.uip.edu.pa/lic-en-banca-y-finanzas/">{{ a }}</a></li>
+            {% elif a == "Lic. en Comercio Internacional " %}
+                <li><a href="http://www.uip.edu.pa/lic-en-comercio-internacional/">{{ a }}</a></li>
+            {% elif a == "Lic. en Negocios Internacionales " %}
+                <li><a href="http://www.uip.edu.pa/lic-en-negocios-internacionales/">{{ a }}</a></li>
+            {% elif a == "Lic. en Ingeniería Comercial Lic. en Comportamiento Organizacional y Desarrollo Humano " %}
+                <li><a href="http://www.uip.edu.pa/lic-en-comportamiento-organizacional-y-desarrollo-humano/">{{ a }}</a></li>
+            {% elif a == "Lic. en Global Business " %}
+                <li><a href="http://www.uip.edu.pa/lic-en-global-business/">{{ a }}</a></li>
+            {% elif a == "Lic. en Administración de Empresas Turísticas" %}
+                <li><a href="http://www.uip.edu.pa/lic-en-administracion-de-empresas-turisticas/">{{ a }}</a></li>
+            {% elif a == "Lic. en Mercadeo y Publicidad" %}
+                <li><a href="http://www.uip.edu.pa/lic-en-mercadeo-y-publicidad/">{{ a }}</a></li>
+            {% elif a == "Lic. en Mercadeo y Ventas" %}
+                <li><a href="http://www.uip.edu.pa/lic-en-mercadeo-y-ventas/">{{ a }}</a></li>
+            {% elif a == "Lic. en Administración Marítima y Portuaria" %}
+                <li><a href="http://www.uip.edu.pa/index.php/lic-en-administracion-maritima-y-portuaria/">{{ a }}</a></li>
+            {% elif a == "Lic. en Gestión Marítima con énfasis en Operaciones Portuarias" %}
+                <li><a href="http://www.uip.edu.pa/index.php/lic-en-gestion-maritima-con-enfasis-en-operaciones-portuarias/">{{ a }}</a></li>
+            {% elif a == "Lic. en Gestión Marítima con énfasis en Transporte Multimodal" %}
+                <li><a href="http://www.uip.edu.pa/index.php/lic-en-gestion-maritima-con-enfasis-en-transporte-multimodal/">{{ a }}</a></li>
+            {% elif a == "Lic. en Ingeniería de Transporte y Logística" %}
+                <li><a href="http://www.uip.edu.pa/index.php/lic-en-ingenieria-de-transporte-y-logistica/">{{ a }}</a></li>
+            {% elif a == "Lic. en Ing. de Redes y Datos con énfasis en Sistemas Inalámbricos " %}
+                <li><a href="http://www.uip.edu.pa/lic-en-ingenieria-de-redes-y-datos-con-enfasis-en-sistemas-inalambricos/">{{ a }}</a></li>
+            {% elif a == "Lic. en Ingeniería en Sistemas Computacionales " %}
+                <li><a href="http://www.uip.edu.pa/lic-en-ingenieria-en-sistemas-computacionales/">{{ a }}</a></li>
+            {% elif a == "Lic. en Ingeniería en Electrónica y Comunicaciones " %}
+                <li><a href="http://www.uip.edu.pa/lic-en-ingenieria-electronica-y-de-comunicaciones/">{{ a }}</a></li>
+            {% elif a == "Lic. en Ingeniería en Industrial con énfasis en Gestión de Calidad" %}
+                <li><a href="http://www.uip.edu.pa/lic-en-ingenieria-industrial-con-enfasis-en-gestion-de-calidad/">{{ a }}</a></li>
+            {% elif a == "Lic. en Ingeniería en Industrial con énfasis en Gestión de Operaciones " %}
+                <li><a href="http://www.uip.edu.pa/lic-en-ingenieria-industrial-con-enfasis-en-gestion-de-operaciones/">{{ a }}</a></li>
+            {% elif a == "Lic. en Ingeniería Industrial y de Sistemas " %}
+                <li><a href="http://www.uip.edu.pa/lic-en-ingenieria-industrial-y-de-sistemas/">{{ a }}</a></li>
+            {% elif a == "Lic. en Sistemas Comp. con énfasis en Desarrollo de Sistemas Avanzados de Redes y Software " %}
+                <li><a href="http://www.uip.edu.pa/lic-en-sistemas-computacionales-con-enfasis-en-desarrollo-de-sistemas-avanzados-de-redes-y-software/">{{ a }}</a></li>
+            {% elif a == "Doctor en Medicina" %}
+                <li><a href="http://www.uip.edu.pa/doctor-en-medicina/">{{ a }}</a></li>
+            {% elif a == "Doctor en Cirujia Dental" %}
+                <li><a href="http://www.uip.edu.pa/doctor-en-cirugia-dental/">{{ a }}</a></li>
+            {% elif a == "Licenciatura en Enfermería" %}
+                <li><a href="http://www.uip.edu.pa/lic-en-enfermeria/">{{ a }}</a></li>
+            {% elif a == "Licenciatura en Psicología" %}
+                <li><a href="http://www.uip.edu.pa/lic-en-psicologia/">{{ a }}</a></li>
+            {% elif a == "Licenciatura en Nutrición y Dietética" %}
+                <li><a href="http://www.uip.edu.pa/lic-en-nutricion-y-dietetica/">{{ a }}</a></li>
             {% endif %}
-            -->
-            <li>{{ a }}</li>
         {% endfor %}
         </ul>
         <h5> Escoge una, haz clic sobre ella, te llevara a la pagina de la universidad para que veas mas informacion</h5>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <head>
+        <title>Hotelería, Gastronomía y Turismo </title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/style4.css') }}">
+    </head>
+    <Body>
+        <div>
+            {% if session['name'] %}
+            <h2>Hola {{session['name']}}, tu facultad escogida fue {{ facul }}</h2><br>
+            {% endif %}
+            <form name="Ciencias de la Salud" action="/CienciasSalud" method="post" onsubmit="">
+                <p>
+                <p>1 ¿Siente gusto en ayudar a las personas sin saber su edad o sexo? </p>
+                    <input type="radio" name="pregunta1" value="si"> Si <br>
+                    <input type="radio" name="pregunta1" value="no"> No <br>
+                <p>2 ¿Le ha llegado a interesar mejorar la sonrisa de personas a nivel médico? </p>
+                    <input type="radio" name="pregunta2" value="si"> Si <br>
+                    <input type="radio" name="pregunta2" value="no"> No <br>
+               <p>3 ¿Le atraería asistir en labores de apoyo y atender periódicamente a personas</p>
+                    <input type="radio" name="pregunta3" value="si"> Si <br>
+                    <input type="radio" name="pregunta3" value="no"> No <br>
+                <p>4 ¿Le gusta aconsejar y analizar personas y situaciones?</p>
+                    <input type="radio" name="pregunta4" value="si"> Si <br>
+                    <input type="radio" name="pregunta4" value="no"> No <br>
+                <p>5 ¿Le gusta aconsejar y analizar personas y situaciones?</p>
+                    <input type="radio" name="pregunta5" value="si"> Si <br>
+                    <input type="radio" name="pregunta5" value="no"> No <br>
+                <p><input id="boton" type=submit value=Next></p>
+            </form>
+        </div>
+    </Body>
+</html>

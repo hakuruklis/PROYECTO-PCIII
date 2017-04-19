@@ -16,8 +16,12 @@ def index():
 def iniciar():
     if request.method == 'POST':
         session['name'] = request.form['yourname']
-        respuesta = make_response(render_template('pag1.html'))
-        return respuesta
+        if session['name'] == "":
+            respuesta = make_response(render_template('index.html'))
+            return respuesta
+        else:
+            respuesta = make_response(render_template('pag1.html'))
+            return respuesta
 
 @app.route('/escogerCarrera', methods=['POST'])
 def test1():
@@ -87,7 +91,7 @@ def test2():
        respuesta = make_response(render_template('Sistemas.html', facul=facultad_final))
        return respuesta
    elif facultad_final == 'Ciencias de la salud':
-       respuesta = make_response(render_template('comunicacion.html', facul=facultad_final))
+       respuesta = make_response(render_template('CS', facul=facultad_final))
        return respuesta
    elif facultad_final == 'Arquitectura':
        respuesta = make_response(render_template('Arquitectura.html', facul=facultad_final))
@@ -222,25 +226,27 @@ def CienciasAdministraciones():
     respuesta = make_response(render_template('Carrera Final.html', c=carreras))
     return respuesta
 
-# @app.route('/LMP', methods=['POST'])
-# def LMP():
-#     pregunta1 = request.form['pregunta1']
-#     pregunta2 = request.form['pregunta2']
-#     pregunta3 = request.form['pregunta3']
-#     pregunta4 = request.form['pregunta4']
-#     carreras=[]
-#     if pregunta1 == "si":
-#         carrera='1.	Lic. en Administración Marítima y Portuaria '
-#         carreras.append(carrera)
-#     if pregunta2 == "si":
-#         carrera= '2. Lic. en Contabilidad '
-#         carreras.append(carrera)
-#     if pregunta3 == "si":
-#         carrera='3.	Lic. en Administración de Recursos Humanos '
-#         carreras.append(carrera)
-#     if pregunta4 == "si":
-#         carrera ='4. Lic. en Banca y Finanzas '
-#         carreras.append(carrera)
+@app.route('/LMP', methods=['POST'])
+def LMP():
+    pregunta1 = request.form['pregunta1']
+    pregunta2 = request.form['pregunta2']
+    pregunta3 = request.form['pregunta3']
+    pregunta4 = request.form['pregunta4']
+    carreras=[]
+    if pregunta1 == "si":
+        carrera='Lic. en Administración Marítima y Portuaria'
+        carreras.append(carrera)
+    if pregunta2 == "si":
+        carrera= 'Lic. en Gestión Marítima con énfasis en Operaciones Portuarias'
+        carreras.append(carrera)
+    if pregunta3 == "si":
+        carrera='Lic. en Gestión Marítima con énfasis en Transporte Multimodal'
+        carreras.append(carrera)
+    if pregunta4 == "si":
+        carrera ='Lic. en Ingeniería de Transporte y Logística'
+        carreras.append(carrera)
+    respuesta = make_response(render_template('Carrera Final.html', c=carreras))
+    return respuesta
 
 @app.route('/Ingenieria', methods=['POST'])
 def ingenieria():
@@ -272,6 +278,32 @@ def ingenieria():
         carreras.append(carrera)
     if pregunta7 == "si":
         carrera = 'Lic. en Sistemas Comp. con énfasis en Desarrollo de Sistemas Avanzados de Redes y Software '
+        carreras.append(carrera)
+    respuesta = make_response(render_template('Carrera Final.html', c=carreras))
+    return respuesta
+
+@app.route('/CienciasSalud', methods=['POST'])
+def CienciasSalud():
+    carreras = []
+    pregunta1 = request.form['pregunta1']
+    pregunta2 = request.form['pregunta2']
+    pregunta3 = request.form['pregunta3']
+    pregunta4 = request.form['pregunta4']
+    pregunta5 = request.form['pregunta5']
+    if pregunta1 == "si":
+        carrera = 'Doctor en Medicina'
+        carreras.append(carrera)
+    if pregunta2 == "si":
+        carrera = 'Doctor en Cirujia Dental'
+        carreras.append(carrera)
+    if pregunta3 == "si":
+        carrera = 'Licenciatura en Enfermería'
+        carreras.append(carrera)
+    if pregunta4 == "si":
+        carrera = 'Licenciatura en Psicología'
+        carreras.append(carrera)
+    if pregunta5 == "si":
+        carrera = 'Licenciatura en Nutrición y Dietética'
         carreras.append(carrera)
     respuesta = make_response(render_template('Carrera Final.html', c=carreras))
     return respuesta
