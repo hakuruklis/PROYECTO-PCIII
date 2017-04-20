@@ -8,8 +8,9 @@
 <body>
 <div>
 {% if session['name'] %}
-            <h2>Hola {{session['name']}}, tu facultad escogida fue {{ facul }}</h2><br>
+            <h2>Hola {{session['name']}}, tu facultad escogida fue {{ facul }}</h2>
     {% endif %}
+    <h5>Completa el siguiente test para encontar tu carrera</h5>
 <form action="/Ingenieria", method = 'POST'>
     <p><h2>Porfavor, responda las preguntas acontinuación: </h2></p>
     <p class="pregunta">1. ¿Se ha interesado por tecnologías inalámbricas?</p>
@@ -33,7 +34,7 @@
     <p class="pregunta">7. ¿Le gustaría Gerenciar proyectos de infraestructura de redes y de paso programar los sistemas de las mismas?</p>
     <p><input type="radio", name="pregunta7", value="si">Si</p>
     <p><input type="radio", name="pregunta7", value="No">No</p>
-    <p><input type="submit", name="enviar", value="Siguiente"></p>
+    <p><input type="submit", name="boton"></p>
 </form>
 </div>
 </body>

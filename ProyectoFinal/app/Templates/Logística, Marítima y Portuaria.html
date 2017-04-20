@@ -6,8 +6,9 @@
     <Body>
         <div>
             {% if session['name'] %}
-            <h2>Hola {{session['name']}}, tu facultad escogida fue {{ facul }}</h2><br>
+            <h2>Hola {{session['name']}}, tu facultad escogida fue {{ facul }}</h2>
             {% endif %}
+            <h5>Completa el siguiente test para encontar tu carrera</h5>
             <form name="Logística,MarítimayPortuaria" action="/LMP" method="post" onsubmit="">
                 <p>
                 <p>1 ¿Le gustaría administrar empresas portuarias?</p>

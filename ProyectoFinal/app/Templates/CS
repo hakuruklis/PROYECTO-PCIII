@@ -6,8 +6,9 @@
     <Body>
         <div>
             {% if session['name'] %}
-            <h2>Hola {{session['name']}}, tu facultad escogida fue {{ facul }}</h2><br>
+            <h2>Hola {{session['name']}}, tu facultad escogida fue {{ facul }}</h2>
             {% endif %}
+            <h5>Completa el siguiente test para encontar tu carrera</h5>
             <form name="Ciencias de la Salud" action="/CienciasSalud" method="post" onsubmit="">
                 <p>
                 <p>1 ¿Siente gusto en ayudar a las personas sin saber su edad o sexo? </p>
@@ -22,7 +23,7 @@
                 <p>4 ¿Le gusta aconsejar y analizar personas y situaciones?</p>
                     <input type="radio" name="pregunta4" value="si"> Si <br>
                     <input type="radio" name="pregunta4" value="no"> No <br>
-                <p>5 ¿Le gusta aconsejar y analizar personas y situaciones?</p>
+                <p>5 ¿Alguna vez ha pensado en desarrollar planes de alimentación y nutrición para el ser humano?</p>
                     <input type="radio" name="pregunta5" value="si"> Si <br>
                     <input type="radio" name="pregunta5" value="no"> No <br>
                 <p><input id="boton" type=submit value=Next></p>

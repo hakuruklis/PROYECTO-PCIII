@@ -8,9 +8,9 @@
 <body>
 <div>
         {% if session['name'] %}
-           <h2>Okay {{session['name']}} segun el test esta son las facultades que se acomodana a tu actitud</h2>
+           <h2>Okay {{session['name']}} segun el test esta son las facultades que se acomodan a tu actitud</h2>
         {% endif %}
-            <h3>Escge al facultad que mas te llame la atencion para pasar al test que escogera tu carrera indicada</h3>
+            <h3>Escoge al facultad que mas te llame la atencion para pasar al test que escogera tu carrera indicada</h3>
         <form name="myForm" action="/SeleccionarFacultad" method="post" onsubmit="">
             {% for a in c %}
                 {% if a == "Comunicacion y disenio" %}

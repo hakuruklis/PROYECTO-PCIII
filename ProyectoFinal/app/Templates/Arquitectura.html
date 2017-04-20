@@ -8,8 +8,9 @@
 <body>
     <div>
     {% if session['name'] %}
-            <h2>Hola {{session['name']}}, tu facultad escogida fue {{ facul }}</h2><br>
+            <h2>Hola {{session['name']}}, tu facultad escogida fue {{ facul }}</h2>
     {% endif %}
+        <h5>Completa el siguiente test para encontar tu carrera</h5>
                 <form name="myForm" action="/Arquitectura" method="post" onsubmit="">
                 <p class="pregunta">1 ¿Le gusta dibujar planos?   </p>
                     <input type="radio" name="pregunta1" value="si"> Si <br>

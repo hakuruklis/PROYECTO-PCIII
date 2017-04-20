@@ -1,3 +1,8 @@
+'''
+App Web que escoge una carrera universitaria de la Universidad Interameriacana de Panama;
+usando Flask, en la misma se ingresa un nombre y se sigue un test para escoger la carrera y
+este redirecciona a la pagina de la universidad
+'''
 from flask import Flask
 from flask import render_template
 from flask import request
@@ -10,10 +15,17 @@ app.secret_key = 'F12Zr47j\3yX R~X@H!jmM]Lwf/,?KT'
 
 @app.route('/')
 def index():
+    '''
+    :return: Retorna hacia el index.html
+    '''
     return render_template('index.html')
 
 @app.route('/iniciarTest', methods=['POST'])
 def iniciar():
+    '''
+    Funcion que inicia el test
+    :return: Retorna hacia el Pag1.html
+    '''
     if request.method == 'POST':
         session['name'] = request.form['yourname']
         if session['name'] == "":
@@ -24,7 +36,11 @@ def iniciar():
             return respuesta
 
 @app.route('/escogerCarrera', methods=['POST'])
-def test1():
+def EscogerCarrera():
+    '''
+    :return: Toma las respuestas de las 25 preguntas, los analiza y retorna a Pag2.html con las carreras que
+    evaluo a traves de las preguntas
+    '''
     carreras=[]
     pregunta1 = request.form['pregunta1']
     pregunta2 = request.form['pregunta2']
@@ -52,7 +68,7 @@ def test1():
     pregunta24 = request.form['pregunta24']
     pregunta25 = request.form['pregunta25']
     if (pregunta1 == "si" and pregunta4 == "si") or (pregunta1 == "si" and pregunta18 == "si") or (pregunta4 == "si" and pregunta18 == "si"):
-        carrera='Comunicacion y disenio'
+        carrera='Comunicacion y diseño'
         carreras.append(carrera)
     if (pregunta2 == "si" and pregunta5 == "si") or (pregunta2 == "si" and pregunta14 == "si") or (pregunta5 == "si" and pregunta14 == "si"):
         carrera = 'Ciencias Administrativas'
@@ -79,7 +95,11 @@ def test1():
     return respuesta
 
 @app.route('/SeleccionarFacultad', methods=['POST'])
-def test2():
+def SeleccionarFacultad():
+   '''
+   Funcion que es para escoger la facultad
+   :return: Retorna el Html de la facultad escogida por el usuario
+   '''
    facultad_final=request.form['pregunta']
    if facultad_final == 'Comunicacion y disenio':
        respuesta=make_response(render_template('comunicacion.html',facul=facultad_final))
@@ -108,6 +128,10 @@ def test2():
 
 @app.route('/Comunicacion', methods=['POST'])
 def Comunicacion():
+    '''
+    Facultad Comunicacion y Diseño
+    :return: Retorna los valores de las preguntas, para escoger la carrera final, segun las preguntas de Comunicacion.html en el Carrera Final.html
+    '''
     pregunta1 = request.form['pregunta1']
     pregunta2 = request.form['pregunta2']
     pregunta3 = request.form['pregunta3']
@@ -130,6 +154,11 @@ def Comunicacion():
 
 @app.route('/Arquitectura', methods=['POST'])
 def Arquitectura():
+    '''
+    Facultad Arquitectura
+    :return: Retorna los valores de las preguntas, para escoger la carrera final,
+     segun las preguntas de Arquitectura.html en el Carrera Final.html
+    '''
     pregunta1 = request.form['pregunta1']
     pregunta2 = request.form['pregunta2']
     pregunta3 = request.form['pregunta3']
@@ -146,6 +175,11 @@ def Arquitectura():
 
 @app.route('/Hotelería,GastronomíayTurismo', methods=['POST'])
 def HoteleríaGastronomíayTurismo():
+    '''
+    Facultad Hotelería, Gastronomía y Turismo
+    :return: Retorna los valores de las preguntas, para escoger la carrera final,
+     segun las preguntas de HGT.html en el Carrera Final.html
+    '''
     pregunta1 = request.form['pregunta1']
     pregunta2 = request.form['pregunta2']
     pregunta3 = request.form['pregunta3']
@@ -164,6 +198,11 @@ def HoteleríaGastronomíayTurismo():
 
 @app.route('/Derechosycienciaspoliticas', methods=['POST'])
 def Derechosycienciaspoliticas():
+    '''
+    Facultad Derechos y cienciaspoliticas
+    :return: Retorna los valores de las preguntas, para escoger la carrera final,
+    segun las preguntas de Derechos y ciencias politicas.html en el Carrera Final.html
+    '''
     pregunta1 = request.form['pregunta1']
     pregunta2 = request.form['pregunta2']
     carreras=[]
@@ -178,6 +217,11 @@ def Derechosycienciaspoliticas():
 
 @app.route('/CienciasAdministraciones', methods=['POST'])
 def CienciasAdministraciones():
+    '''
+    Facultad Derechos y cienciaspoliticas
+    :return: Retorna los valores de las preguntas, para escoger la carrera final,
+     segun las preguntas de Derechos y ciencias politicas.html en el Carrera Final.html
+    '''
     carreras=[]
     pregunta1 = request.form['pregunta1']
     pregunta2 = request.form['pregunta2']
@@ -228,6 +272,11 @@ def CienciasAdministraciones():
 
 @app.route('/LMP', methods=['POST'])
 def LMP():
+    '''
+    Facultad de Logistica Maritima y Portuaria
+    :return: Retorna los valores de las preguntas, para escoger la carrera final,
+    segun las preguntas de Logistica Maritima y Portuaria.html en el Carrera Final.html
+    '''
     pregunta1 = request.form['pregunta1']
     pregunta2 = request.form['pregunta2']
     pregunta3 = request.form['pregunta3']
@@ -250,6 +299,11 @@ def LMP():
 
 @app.route('/Ingenieria', methods=['POST'])
 def ingenieria():
+    '''
+    Facultad de Ingenieria
+    :return: Retorna los valores de las preguntas, para escoger la carrera final,
+    segun las preguntas de Ingenieria.html en el Carrera Final.html
+    '''
     carreras = []
     pregunta1 = request.form['pregunta1']
     pregunta2 = request.form['pregunta2']
@@ -284,6 +338,11 @@ def ingenieria():
 
 @app.route('/CienciasSalud', methods=['POST'])
 def CienciasSalud():
+    '''
+    Facultad Ciencias de la Salud
+    :return: Retorna los valores de las preguntas, para escoger la carrera final,
+     segun las preguntas de CS.html en el Carrera Final.html
+    '''
     carreras = []
     pregunta1 = request.form['pregunta1']
     pregunta2 = request.form['pregunta2']
